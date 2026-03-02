@@ -1,0 +1,70 @@
+body {
+  background-color: #588157;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card {
+  background-color: #344e41;
+  color: white;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px black;
+}
+.card-body {
+  padding: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#udvozles {
+  text-align: center;
+  margin-top: 50px;
+}
+#otlet {
+  width: 600px;
+}
+#form1 {
+  margin-bottom: 30px;
+}
+#kuldes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+#kilepes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 80px;
+  left: 795px;
+}
+
+@media (width < 600px) {
+  .card {
+    max-width: 600px;
+  }
+  #txtarea {
+    width: max-content;
+  }
+}
+@media (width < 900px) {
+  .card {
+    max-width: 600px;
+  }
+  #txtarea {
+    width: 400px;
+  }
+  #kilepes {
+    position: unset;
+  }
+  #kuldes {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
