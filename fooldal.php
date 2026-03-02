@@ -34,17 +34,43 @@ if (!$conn) {
   <h1 id="udvozles">Üdvözlünk, <?php echo $_SESSION["fnev"]; ?>!</h1>
 
   <div class="card">
-    <div class="card-body">
-      <form id="form1" method="post" action="php/otletlada.php">
-        <div class="input-group" id="txtarea">
-          <span class="input-group-text">Írd be az ötleted: </span>
-          <textarea name="otlet" id="otlet" class="form-control" aria-label="With textarea"></textarea>
+    <div class="card-body" id="body1">
+      <h2>Válassz a kvízek közül:</h2>
+      <div class="container">
 
-        </div>
-        <button type="submit" id="kuldes" class="btn btn-success">Küldés</button>
-      </form>
-      <form action="" style="width: fit-content;">
-        <button type="button" id="kilepes" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <form action="">
+          <div class="card" id="kartya" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 1</h3>
+              <p class="card-text">A kvíz rövid leírása</p>
+              <a href="#" class="btn btn-primary">Kvíz Indítása</a>
+            </div>
+          </div>
+        </form>
+
+        <form action="">
+          <div class="card" id="kartya" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 2</h3>
+              <p class="card-text">A kvíz rövid leírása</p>
+              <a href="#" class="btn btn-primary">Kvíz Indítása</a>
+            </div>
+          </div>
+        </form>
+
+        <form action="">
+          <div class="card" id="kartya" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 3</h3>
+              <p class="card-text">A kvíz rövid leírása</p>
+              <a href="#" class="btn btn-primary">Kvíz Indítása</a>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <form action="" id="kilepes">
+        <button type="button" id="kilepes" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Kilépés
         </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
