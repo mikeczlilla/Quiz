@@ -12,9 +12,9 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 $randomszam = rand(1, 7);
-
 $sql = "SELECT kerdes, jo_valasz, rossz_valasz1, rossz_valasz2, rossz_valasz3 FROM kerdesek1 WHERE id = '$randomszam'";
 $result = mysqli_query($conn, $sql);
+$tomb = [];
 
 if (mysqli_num_rows($result) > 0) {
   $row = mysqli_fetch_assoc($result);
@@ -23,7 +23,15 @@ if (mysqli_num_rows($result) > 0) {
   $rossz_valasz1 = $row['rossz_valasz1'];
   $rossz_valasz2 = $row['rossz_valasz2'];
   $rossz_valasz3 = $row['rossz_valasz3'];
+  $tomb[] = $jo_valasz;
+  $tomb[] = $rossz_valasz1;
+  $tomb[] = $rossz_valasz2;
+  $tomb[] = $rossz_valasz3;
+
 }
+
+shuffle($tomb);
+
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -48,14 +56,14 @@ if (mysqli_num_rows($result) > 0) {
     <div class="card-body" id="body1">
       <form action="./php/quiz_back.php" method="post">
         <h2><?php echo $kerdes; ?></h2>
-        <div>
-          <button type="submit" name="valasz" value="1" class="btn btn-primary"><?php echo $jo_valasz; ?></button>
-          <button type="submit" name="valasz" value="2" class="btn btn-primary"><?php echo $rossz_valasz1; ?></button>
-          <button type="submit" name="valasz" value="3" class="btn btn-primary"><?php echo $rossz_valasz2; ?></button>
-          <button type="submit" name="valasz" value="4" class="btn btn-primary"><?php echo $rossz_valasz3; ?></button>
+        <div id="buttons">
+          <button type="submit" name="valasz" value="1" class="btn btn-primary"><?php echo $tomb[0]; ?></button>
+          <button type="submit" name="valasz" value="2" class="btn btn-primary"><?php echo $tomb[1]; ?></button>
+          <button type="submit" name="valasz" value="3" class="btn btn-primary"><?php echo $tomb[2]; ?></button>
+          <button type="submit" name="valasz" value="4" class="btn btn-primary"><?php echo $tomb[3]; ?></button>
         </div>
       </form>
-    </div>
+    </div>  
   </div>
 </body>
 
