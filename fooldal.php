@@ -18,7 +18,7 @@ if (!$conn) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ötletláda</title>
+  <title>Kvíz</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -43,7 +43,7 @@ if (!$conn) {
             <div class="card-body">
               <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 1</h3>
               <p class="card-text">A kvíz rövid leírása</p>
-              <a href="#" class="btn btn-primary">Kvíz Indítása</a>
+              <a href="kviz1.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
         </form>
