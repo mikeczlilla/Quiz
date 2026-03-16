@@ -1,0 +1,133 @@
+k1:  
+Fekete István Vuk c. regényében, melyik szereplő volt róka?
+
+v1(j):
+Karak
+
+v2:
+Fickó
+
+v3:
+Csufi
+
+v4:
+Cili
+
+
+
+k2:  
+Melyik szerv nem megfelelő működése felel a cukorbetegségért?
+
+v1(j):
+hasnyálmirigy
+
+v2:
+agyalapimirigy
+
+v3:
+pajzsmirigy
+
+v4:
+nyálmirigy
+
+
+
+k3:  
+Mi Montenegró fővárosa?
+
+v1(j):
+Podgorica
+
+v2:
+Pristina
+
+v3:
+Szkopje
+
+v4:
+Praia
+
+
+
+k4:  
+Ki írta a Nagy Gatsby című regényt?
+
+v1(j):
+F. Scott Fitzgerald
+
+v2:
+Thomas Mann
+
+v3:
+James Joyce
+
+v4:
+Nora Barnacle
+
+
+
+k5:  
+Melyik sziget tartozik Franciaországhoz?
+
+v1(j):
+Korzika
+
+v2:
+Ciprus
+
+v3:
+Málta
+
+v4:
+Tenerife
+
+
+
+k6:  
+Melyik ázsiai ország az, melynek területe átnyúlik a déli féltekére is?
+
+v1(j):
+Indonézia
+
+v2:
+Japán
+
+v3:
+India
+
+v4:
+Kína
+
+
+
+k7:  
+Élő szervezeten kívül elvégzett kísérletezési technika. Melyik jelenti azt, hogy üvegben?
+
+v1(j):
+in vitro
+
+v2:
+in vino
+
+v3:
+in vivo
+
+v4:
+in viro
+
+
+
+k8:  
+Ki a főisten a római mitológiában?
+
+v1(j):
+Jupiter
+
+v2:
+Uranus
+
+v3:
+Aurora
+
+v4:
+Zeus
