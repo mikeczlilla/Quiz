@@ -11,7 +11,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-$randomszam = rand(1, 11);
+$randomszam = rand(1, 15);
 $sql = "SELECT kerdes, jo_valasz, rossz_valasz1, rossz_valasz2, rossz_valasz3 FROM kerdesek1 WHERE id = '$randomszam'";
 $result = mysqli_query($conn, $sql);
 $tomb = [];
@@ -27,7 +27,6 @@ if (mysqli_num_rows($result) > 0) {
   $tomb[] = $rossz_valasz1;
   $tomb[] = $rossz_valasz2;
   $tomb[] = $rossz_valasz3;
-
 }
 
 shuffle($tomb);
@@ -63,7 +62,7 @@ shuffle($tomb);
           <button type="submit" name="valasz" value="4" class="btn btn-primary"><?php echo $tomb[3]; ?></button>
         </div>
       </form>
-    </div>  
+    </div>
   </div>
 </body>
 
