@@ -137,3 +137,77 @@ Zeus
 
 pl:
 INSERT INTO `kerdesek1`(`kerdes`, `jo_valasz`, `rossz_valasz1`, `rossz_valasz2`, `rossz_valasz3`) VALUES ('Fekete István Vuk c. regényében, melyik szereplő volt róka?','Karak','Fickó','Csufi','Cili')
+
+
+
+igaz/hamis:
+
+k1:Igaz vagy hamis? Winston Smith az 1984 című Orwell-regény főhőse.
+
+v1(j): Igaz
+
+v2: Hamis
+
+
+k2:Igaz vagy hamis? A latin hallux szó az emberi anatómiában a kislábujjra utal.
+
+v1(j): Hamis
+
+v2: Igaz
+
+
+
+k3: Igaz vagy hamis? A Jupiter az egyetlen bolygó a Naprendszerben, ami az óramutató járásával megegyező irányban forog.
+
+v1(j): Hamis
+
+v2: Igaz
+
+
+k4:Igaz vagy hamis az állítás? Albert Einstein a „relativitáselmélet atyja”.
+
+v1(j): Igaz
+
+v2: Hamis
+
+
+k5: Igaz vagy hamis az állítás? Liudolf Gizella volt I. István magyar király felesége.
+
+v1(j): Igaz
+
+v2: Hamis
+
+
+k6: Igaz vagy hamis? Az asztrológiában a Rák hava június 24-től július 25-ig tart.
+
+v1(j): Hamis
+
+v2: Igaz
+
+
+k7: Igaz vagy hamis? A Stranger Things című sci-fi sorozat egy Derry nevű kitalált városban játszódik.
+
+v1(j): Hamis
+
+v2: Igaz
+
+
+k8:Igaz vagy hamis? A párizsi békeszerződések aláírásával zárult le a második világháború Magyarország, Finnország, Bulgária, Olaszország és Románia számára.
+
+v1(j): Igaz
+
+v2: Hamis
+
+
+k9:Igaz vagy hamis az állítás? A Szahara a világ legnagyobb sivataga.
+
+v1(j): Hamis
+
+v2: Igaz
+
+
+k10:Igaz vagy hamis? A Bohemian Rhapsody-ban, a Queen egyik legnépszerűbb dalában a híres csillagász, Galileo Galilei neve is említésre kerül.
+
+v1(j): Igaz
+
+v2: Hamis
