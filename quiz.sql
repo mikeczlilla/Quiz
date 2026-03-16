@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 16. 10:35
+-- Létrehozás ideje: 2026. Már 16. 10:48
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -73,7 +73,10 @@ INSERT INTO `kerdesek1` (`id`, `kerdes`, `jo_valasz`, `rossz_valasz1`, `rossz_va
 (5, 'Melyik a periódusos rendszer második eleme?', 'He', 'Ne', 'H', 'Na'),
 (6, 'Melyik volt Mikszáth Kálmán műve?', 'Bede Anna tartozása', 'Ágnes asszony', 'Szondi két apródja', 'Toldi'),
 (7, 'Négy lába van, asztal, de nem szék. Mi az?', 'Asztal', 'Kecske', 'Attila', 'Szék'),
-(8, 'Fekete István Vuk c. regényében, melyik szereplő volt róka?', 'Karak', 'Fickó', 'Csufi', 'Cili');
+(8, 'Fekete István Vuk c. regényében, melyik szereplő volt róka?', 'Karak', 'Fickó', 'Csufi', 'Cili'),
+(9, 'Melyik szerv nem megfelelő működése felel a cukorbetegségért?', 'hasnyálmirigy\r\n', 'agyalapimirigy', 'pajzsmirigy', 'nyálmirigy\r\n'),
+(10, 'Mi Montenegró fővárosa?', 'Podgorica', 'Pristina', 'Szkopje', 'Praia'),
+(11, 'Ki írta a Nagy Gatsby című regényt?', 'F. Scott Fitzgerald\r\n', 'Thomas Mann\r\n', 'James Joyce', 'Nora Barnacle');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -105,7 +108,7 @@ ALTER TABLE `felhasznalok`
 -- AUTO_INCREMENT a táblához `kerdesek1`
 --
 ALTER TABLE `kerdesek1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
