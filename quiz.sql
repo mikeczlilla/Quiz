@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 16. 10:48
+-- Létrehozás ideje: 2026. Már 16. 13:53
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -76,7 +76,11 @@ INSERT INTO `kerdesek1` (`id`, `kerdes`, `jo_valasz`, `rossz_valasz1`, `rossz_va
 (8, 'Fekete István Vuk c. regényében, melyik szereplő volt róka?', 'Karak', 'Fickó', 'Csufi', 'Cili'),
 (9, 'Melyik szerv nem megfelelő működése felel a cukorbetegségért?', 'hasnyálmirigy\r\n', 'agyalapimirigy', 'pajzsmirigy', 'nyálmirigy\r\n'),
 (10, 'Mi Montenegró fővárosa?', 'Podgorica', 'Pristina', 'Szkopje', 'Praia'),
-(11, 'Ki írta a Nagy Gatsby című regényt?', 'F. Scott Fitzgerald\r\n', 'Thomas Mann\r\n', 'James Joyce', 'Nora Barnacle');
+(11, 'Ki írta a Nagy Gatsby című regényt?', 'F. Scott Fitzgerald\r\n', 'Thomas Mann\r\n', 'James Joyce', 'Nora Barnacle'),
+(12, 'Melyik sziget tartozik Franciaországhoz?', 'Korzika', 'Ciprus', 'Málta', 'Tenerife'),
+(13, 'Melyik ázsiai ország az, melynek területe átnyúlik a déli féltekére is?', 'Indonézia', 'Japán', 'India', 'Kína'),
+(14, 'Élő szervezeten kívül elvégzett kísérletezési technika. Melyik jelenti azt, hogy üvegben?', 'in vitro\r\n', 'in vino', 'in vivo', 'in viro'),
+(15, 'Ki a főisten a római mitológiában?', 'Jupiter', 'Uranus', 'Aurora', 'Zeus');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -102,13 +106,13 @@ ALTER TABLE `kerdesek1`
 -- AUTO_INCREMENT a táblához `felhasznalok`
 --
 ALTER TABLE `felhasznalok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT a táblához `kerdesek1`
 --
 ALTER TABLE `kerdesek1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
