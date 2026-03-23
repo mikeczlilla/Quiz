@@ -42,7 +42,7 @@ if (!$conn) {
           <div class="card" id="kartya" style="width: 18rem;">
             <div class="card-body">
               <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 1</h3>
-              <p class="card-text">A kvíz rövid leírása</p>
+              <p class="card-text">Legyen ön is milliomos!</p>
               <a href="kviz1.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
@@ -52,7 +52,7 @@ if (!$conn) {
           <div class="card" id="kartya" style="width: 18rem;">
             <div class="card-body">
               <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 2</h3>
-              <p class="card-text">A kvíz rövid leírása</p>
+              <p class="card-text">Igaz vagy Hamis?</p>
               <a href="#" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>

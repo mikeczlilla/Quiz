@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 23. 10:12
+-- Létrehozás ideje: 2026. Már 16. 13:53
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -82,35 +82,6 @@ INSERT INTO `kerdesek1` (`id`, `kerdes`, `jo_valasz`, `rossz_valasz1`, `rossz_va
 (14, 'Élő szervezeten kívül elvégzett kísérletezési technika. Melyik jelenti azt, hogy üvegben?', 'in vitro\r\n', 'in vino', 'in vivo', 'in viro'),
 (15, 'Ki a főisten a római mitológiában?', 'Jupiter', 'Uranus', 'Aurora', 'Zeus');
 
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `kerdesek2`
---
-
-CREATE TABLE `kerdesek2` (
-  `id` int(11) NOT NULL,
-  `kerdes` varchar(200) NOT NULL,
-  `jo_valasz` varchar(5) NOT NULL,
-  `rossz_valasz` varchar(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `kerdesek2`
---
-
-INSERT INTO `kerdesek2` (`id`, `kerdes`, `jo_valasz`, `rossz_valasz`) VALUES
-(1, 'Igaz vagy hamis? Winston Smith az 1984 című Orwell-regény főhőse.', 'Igaz', 'Hamis'),
-(2, 'Igaz vagy hamis? A latin hallux szó az emberi anatómiában a kislábujjra utal.', 'Hamis', 'Igaz'),
-(3, 'Igaz vagy hamis? A Jupiter az egyetlen bolygó a Naprendszerben, ami az óramutató járásával megegyező irányban forog.', 'Hamis', 'Igaz'),
-(4, 'Igaz vagy hamis az állítás? Albert Einstein a „relativitáselmélet atyja”.', 'Igaz', 'Hamis'),
-(5, 'Igaz vagy hamis az állítás? Liudolf Gizella volt I. István magyar király felesége.\r\n', 'Igaz', 'Hamis'),
-(6, 'Igaz vagy hamis? Az asztrológiában a Rák hava június 24-től július 25-ig tart.\r\n', 'Hamis', 'Igaz'),
-(7, 'Igaz vagy hamis? A Stranger Things című sci-fi sorozat egy Derry nevű kitalált városban játszódik.', 'Hamis', 'Igaz'),
-(8, 'Igaz vagy hamis? A párizsi békeszerződések aláírásával zárult le a második világháború Magyarország, Finnország, Bulgária, Olaszország és Románia számára.', 'Igaz', 'Hamis'),
-(9, 'Igaz vagy hamis az állítás? A Szahara a világ legnagyobb sivataga.', 'Hamis', 'Igaz'),
-(10, 'Igaz vagy hamis? A Bohemian Rhapsody-ban, a Queen egyik legnépszerűbb dalában a híres csillagász, Galileo Galilei neve is említésre kerül.\r\n', 'Igaz', 'Hamis');
-
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -128,12 +99,6 @@ ALTER TABLE `kerdesek1`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `kerdesek2`
---
-ALTER TABLE `kerdesek2`
-  ADD PRIMARY KEY (`id`);
-
---
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -148,12 +113,6 @@ ALTER TABLE `felhasznalok`
 --
 ALTER TABLE `kerdesek1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT a táblához `kerdesek2`
---
-ALTER TABLE `kerdesek2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

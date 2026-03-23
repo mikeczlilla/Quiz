@@ -73,6 +73,9 @@ img {
   left: 80px;
   bottom: 30px;
 }
+a{
+  margin-left: 20px;
+}
 
 @media (width < 600px) {
   .card {

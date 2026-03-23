@@ -210,7 +210,3 @@ k10:Igaz vagy hamis? A Bohemian Rhapsody-ban, a Queen egyik legnépszerűbb dal�
 v1(j): Igaz
 
 v2: Hamis
-
-
-pl.
-INSERT INTO `kerdesek2`(`kerdes`, `jo_valasz`, `rossz_valasz`) VALUES ('Igaz vagy hamis? Winston Smith az 1984 című Orwell-regény főhőse.','Igaz','Hamis');

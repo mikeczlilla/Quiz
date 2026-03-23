@@ -1,69 +1,87 @@
-<?php
-session_start();
+  <?php
+  session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "quiz";
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "quiz";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-$randomszam = rand(1, 15);
-$sql = "SELECT kerdes, jo_valasz, rossz_valasz1, rossz_valasz2, rossz_valasz3 FROM kerdesek1 WHERE id = '$randomszam'";
-$result = mysqli_query($conn, $sql);
-$tomb = [];
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  $randomszam = rand(1, 15);
+  $sql = "SELECT kerdes, jo_valasz, rossz_valasz1, rossz_valasz2, rossz_valasz3 FROM kerdesek1 WHERE id = '$randomszam'";
+  $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-  $row = mysqli_fetch_assoc($result);
-  $kerdes = $row['kerdes'];
-  $jo_valasz = $row['jo_valasz'];
-  $rossz_valasz1 = $row['rossz_valasz1'];
-  $rossz_valasz2 = $row['rossz_valasz2'];
-  $rossz_valasz3 = $row['rossz_valasz3'];
-  $tomb[] = $jo_valasz;
-  $tomb[] = $rossz_valasz1;
-  $tomb[] = $rossz_valasz2;
-  $tomb[] = $rossz_valasz3;
-}
+  $tomb = [];
 
-shuffle($tomb);
+  if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $kerdes = $row['kerdes'];
+    $jo_valasz = $row['jo_valasz'];
+    $rossz_valasz1 = $row['rossz_valasz1'];
+    $rossz_valasz2 = $row['rossz_valasz2'];
+    $rossz_valasz3 = $row['rossz_valasz3'];
+    $tomb[] = $jo_valasz;
+    $tomb[] = $rossz_valasz1;
+    $tomb[] = $rossz_valasz2;
+    $tomb[] = $rossz_valasz3;
+  }
+  $szamlalo = 0;
 
-?>
-<!DOCTYPE html>
-<html lang="hu">
+  if(isset($_POST['valasz1']) && $_POST['valasz1'] == $jo_valasz) {
+    $szamlalo++;
+  }
+  if(isset($_POST['valasz2']) && $_POST['valasz2'] == $jo_valasz) {
+    $szamlalo++;
+  }
+  if(isset($_POST['valasz3']) && $_POST['valasz3'] == $jo_valasz) {
+    $szamlalo++;
+  }
+  if(isset($_POST['valasz4']) && $_POST['valasz4'] == $jo_valasz) {
+    $szamlalo++;
+  }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kvíz 1</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="kviz.css">
-</head>
+  shuffle($tomb);
+  ?>
+  <!DOCTYPE html>
+  <html lang="hu">
 
-<body>
-  <div class="card">
-    <div class="card-body" id="body1">
-      <form action="./php/quiz_back.php" method="post">
-        <h2><?php echo $kerdes; ?></h2>
-        <div id="buttons">
-          <button type="submit" name="valasz" value="1" class="btn btn-primary"><?php echo $tomb[0]; ?></button>
-          <button type="submit" name="valasz" value="2" class="btn btn-primary"><?php echo $tomb[1]; ?></button>
-          <button type="submit" name="valasz" value="3" class="btn btn-primary"><?php echo $tomb[2]; ?></button>
-          <button type="submit" name="valasz" value="4" class="btn btn-primary"><?php echo $tomb[3]; ?></button>
-        </div>
-      </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvíz 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="kviz.css">
+  </head>
+
+  <body>
+    
+    <div class="card">
+      <div class="card-body" id="body1">
+        <h5 style="text-align: end;">Pontok: <?php echo $szamlalo; ?></h5>
+        <form action="./php/quiz_back.php" method="post">
+          <h2><?php echo $kerdes; ?></h2>
+          <div id="buttons">
+            <form action="" method="post">
+              <button type="submit" name="valasz1" value="<?php echo $tomb[0]; ?>" class="btn btn-primary"><?php echo $tomb[0]; ?></button>
+              <button type="submit" name="valasz2" value="<?php echo $tomb[1]; ?>" class="btn btn-primary"><?php echo $tomb[1]; ?></button>
+              <button type="submit" name="valasz3" value="<?php echo $tomb[2]; ?>" class="btn btn-primary"><?php echo $tomb[2]; ?></button>
+              <button type="submit" name="valasz4" value="<?php echo $tomb[3]; ?>" class="btn btn-primary"><?php echo $tomb[3]; ?></button>
+            </form>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 
-</html>
+  </html>
