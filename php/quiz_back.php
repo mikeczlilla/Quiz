@@ -22,4 +22,5 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION["rossz_valasz2"] = $row['rossz_valasz2'];
     $_SESSION["rossz_valasz3"] = $row['rossz_valasz3'];
 }
+header("Location: kviz1.php");
 ?>
