@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
 
 if ($email == "" or $arrayEmail != $email) {
     $_SESSION["hibauzenet"] = "Érvénytelen bejelentkezés!";
-    header('Location: ../index.php');
+    header('Location: ../frontend/index.php');
     exit;
 }
 
@@ -43,9 +43,9 @@ if ($arrayJelszo == $jelszo) {
         $_SESSION["tszam"] = $row["tszam"];
     }
     echo "Sikeres bejelentkezés";
-    header('Location: ../fooldal.php');
+    header('Location: ../frontend/fooldal.php');
     exit;
 } else {
     $_SESSION["hibauzenet"] = "Érvénytelen bejelentkezés!";
-    header('Location: ../index.php');
+    header('Location: ../frontend/index.php');
 }

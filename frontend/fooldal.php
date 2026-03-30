@@ -19,11 +19,11 @@ if (!$conn) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kvíz</title>
-  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-  <link rel="shortcut icon" href="favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -33,11 +33,11 @@ if (!$conn) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="fooldal.css">
+    <link rel="stylesheet" href="../css/fooldal.css">
 </head>
 
 <body>
-<img class="logo" style="width: 100px; position: absolute; top: 30px; left: 30px; border-radius: 10px;" src="quiz.logo.png" alt="logo">
+<img class="logo" style="width: 100px; position: absolute; top: 30px; left: 30px; border-radius: 10px;" src="../kep/quiz.logo.png" alt="logo">
   <h1 id="udvozles">Üdvözlünk, <?php echo $_SESSION["fnev"]; ?>!</h1>
  
   <div class="card">
@@ -48,7 +48,7 @@ if (!$conn) {
         <form action="">
           <div class="card" id="kartya" style="width: 18rem;">
             <div class="card-body">
-              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 1</h3>
+              <h3 class="card-title"><img src="../kep/ballot.svg" alt="icon"> Kvíz 1</h3>
               <p class="card-text">Legyen ön is milliomos!</p>
               <a href="kviz1.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
@@ -58,7 +58,7 @@ if (!$conn) {
         <form action="">
           <div class="card" id="kartya" style="width: 18rem;">
             <div class="card-body">
-              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 2</h3>
+              <h3 class="card-title"><img src="../kep/ballot.svg" alt="icon"> Kvíz 2</h3>
               <p class="card-text">Igaz vagy Hamis?</p>
               <a href="kviz2.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
@@ -68,9 +68,9 @@ if (!$conn) {
         <form action="">
           <div class="card" id="kartya" style="width: 18rem;">
             <div class="card-body">
-              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 3</h3>
-              <p class="card-text">A kvíz rövid leírása</p>
-              <a href="#" class="btn btn-primary">Kvíz Indítása</a>
+              <h3 class="card-title"><img src="../kep/ballot.svg" alt="icon"> Kvíz 3</h3>
+              <p class="card-text">Legyen ön is milliomos!</p>
+              <a href="kviz3.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
         </form>

@@ -210,7 +210,3 @@ k10:Igaz vagy hamis? A Bohemian Rhapsody-ban, a Queen egyik legnépszerűbb dal�
 v1(j): Igaz
 
 v2: Hamis
-
-
-3 kvíz pl.:
-INSERT INTO `kerdesek3`(`kerdes`, `jo_valasz`, `rossz_valasz1`, `rossz_valasz2`, `rossz_valasz3`) VALUES ('Melyik bolygót nevezik a „vörös bolygónak”?','Mars','Vénusz','Jupiter','Szaturnusz')

@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {
 
 if (empty($email) or empty($jelszo1) or empty($fnev) or empty($vnev) or empty($knev) or empty($tfon) or empty($szdatum)) {
   $_SESSION["hibauzenet"] = "Érvénytelen regisztráció!";
-  header('Location: ../regisztracio.php');
+  header('Location: ../frontend/regisztracio.php');
   exit;
 }
 
@@ -44,7 +44,7 @@ if (array_search($email, $arrayEmail)) {
   VALUES ('$fnev', '$vnev', '$knev', '$email', '$jelszo1', '$tfon', '$szdatum')";
   if ($conn->query($sql) === TRUE) {
     echo "Sikeres regisztráció";
-    header('Location: ../index.php');
+    header('Location: ../frontend/index.php');
     exit;
   } else {
     echo "Hiba: " . $sql . "<br>" . $conn->error;
