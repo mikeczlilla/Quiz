@@ -20,7 +20,14 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `quiz`
 --
+CREATE DATABASE IF NOT EXISTS quiz DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci;
+USE quiz;
 
+-- Táblák törlése (ha léteznek) a tiszta kezdéshez
+DROP TABLE IF EXISTS felhasznalok;
+DROP TABLE IF EXISTS kerdesek1;
+DROP TABLE IF EXISTS kerdesek2;
+DROP TABLE IF EXISTS kerdesek3;
 -- --------------------------------------------------------
 
 --
