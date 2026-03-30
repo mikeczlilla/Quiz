@@ -38,3 +38,14 @@ button {
   text-align: center;
   margin-top: 40px;
 }
+.logo{
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+#kilepes {
+  position: absolute;
+  left: 80px;
+  bottom: 30px;
+}

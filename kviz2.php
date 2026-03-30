@@ -11,8 +11,8 @@
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-  $randomszam = rand(1, 15);
-  $sql = "SELECT kerdes, jo_valasz, rossz_valasz1, rossz_valasz2, rossz_valasz3 FROM kerdesek1 WHERE id = '$randomszam'";
+  $randomszam = rand(1, 10);
+  $sql = "SELECT kerdes, jo_valasz, rossz_valasz FROM kerdesek2 WHERE id = '$randomszam'";
   $result = mysqli_query($conn, $sql);
 
   $tomb = [];
@@ -21,13 +21,9 @@
     $row = mysqli_fetch_assoc($result);
     $kerdes = $row['kerdes'];
     $jo_valasz = $row['jo_valasz'];
-    $rossz_valasz1 = $row['rossz_valasz1'];
-    $rossz_valasz2 = $row['rossz_valasz2'];
-    $rossz_valasz3 = $row['rossz_valasz3'];
+    $rossz_valasz = $row['rossz_valasz'];
     $tomb[] = $jo_valasz;
-    $tomb[] = $rossz_valasz1;
-    $tomb[] = $rossz_valasz2;
-    $tomb[] = $rossz_valasz3;
+    $tomb[] = $rossz_valasz;
   }
   $szamlalo = 0;
 
@@ -37,13 +33,6 @@
   if (isset($_POST['valasz2']) && $_POST['valasz2'] == $jo_valasz) {
     $szamlalo++;
   }
-  if (isset($_POST['valasz3']) && $_POST['valasz3'] == $jo_valasz) {
-    $szamlalo++;
-  }
-  if (isset($_POST['valasz4']) && $_POST['valasz4'] == $jo_valasz) {
-    $szamlalo++;
-  }
-
   shuffle($tomb);
   ?>
   <!DOCTYPE html>
@@ -53,7 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kvíz 1</title>
-
+    
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
@@ -82,14 +71,11 @@
             <form action="" method="post">
               <button type="submit" name="valasz1" value="<?php echo $tomb[0]; ?>" class="btn btn-primary"><?php echo $tomb[0]; ?></button>
               <button type="submit" name="valasz2" value="<?php echo $tomb[1]; ?>" class="btn btn-primary"><?php echo $tomb[1]; ?></button>
-              <button type="submit" name="valasz3" value="<?php echo $tomb[2]; ?>" class="btn btn-primary"><?php echo $tomb[2]; ?></button>
-              <button type="submit" name="valasz4" value="<?php echo $tomb[3]; ?>" class="btn btn-primary"><?php echo $tomb[3]; ?></button>
             </form>
           </div>
         </form>
       </div>
     </div>
-
     <form action="" id="kilepes" style="position: absolute; left: 30px; top: 180px;">
         <button type="button" id="kilepes" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Kilépés
