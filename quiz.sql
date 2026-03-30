@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 23. 10:12
+-- Létrehozás ideje: 2026. Már 30. 10:31
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -111,6 +111,37 @@ INSERT INTO `kerdesek2` (`id`, `kerdes`, `jo_valasz`, `rossz_valasz`) VALUES
 (9, 'Igaz vagy hamis az állítás? A Szahara a világ legnagyobb sivataga.', 'Hamis', 'Igaz'),
 (10, 'Igaz vagy hamis? A Bohemian Rhapsody-ban, a Queen egyik legnépszerűbb dalában a híres csillagász, Galileo Galilei neve is említésre kerül.\r\n', 'Igaz', 'Hamis');
 
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `kerdesek3`
+--
+
+CREATE TABLE `kerdesek3` (
+  `id` int(11) NOT NULL,
+  `kerdes` varchar(250) NOT NULL,
+  `jo_valasz` varchar(100) NOT NULL,
+  `rossz_valasz1` varchar(100) NOT NULL,
+  `rossz_valasz2` varchar(100) NOT NULL,
+  `rossz_valasz3` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `kerdesek3`
+--
+
+INSERT INTO `kerdesek3` (`id`, `kerdes`, `jo_valasz`, `rossz_valasz1`, `rossz_valasz2`, `rossz_valasz3`) VALUES
+(1, 'Melyik bolygót nevezik a „vörös bolygónak”?', 'Mars', 'Vénusz', 'Jupiter', 'Szaturnusz'),
+(2, 'Ki festette a híres „Mona Lisa” című képet?', 'Leonardo da Vinci', 'Michelangelo', 'Vincent van Gogh', 'Pablo Picasso'),
+(3, 'Hány billentyű található egy szabványos zongorán?', '88', '76', '102', '94'),
+(4, 'Melyik országban található a gízai nagy piramis?', 'Egyiptom', 'Görögország', 'Mexikó', 'Olaszország'),
+(5, 'Mi a víz vegyjele?', 'H_2O', 'CO_2', 'NaCl', 'O_2'),
+(6, 'Ki írta a „Rómeó és Júlia” című drámát?', 'William Shakespeare', 'Charles Dickens', 'Jane Austen', 'Mark Twain'),
+(7, 'Melyik a Föld legkisebb kontinense?', ' Ausztrália', 'Európa', 'Antarktisz', 'Dél-Amerika'),
+(8, 'Melyik évben ért véget a második világháború?', '1945', '1918', '1939', '1950'),
+(9, 'Mi a Föld legmagasabb hegycsúcsa?', 'Mount Everest', 'K2', 'Mont Blanc', 'Kilimandzsáró'),
+(10, 'Melyik szervünk felelős a vér pumpálásáért az emberi testben?', 'Tüdő', 'Máj', 'Szív', 'Vese');
+
 --
 -- Indexek a kiírt táblákhoz
 --
@@ -134,6 +165,12 @@ ALTER TABLE `kerdesek2`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `kerdesek3`
+--
+ALTER TABLE `kerdesek3`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
@@ -153,6 +190,12 @@ ALTER TABLE `kerdesek1`
 -- AUTO_INCREMENT a táblához `kerdesek2`
 --
 ALTER TABLE `kerdesek2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT a táblához `kerdesek3`
+--
+ALTER TABLE `kerdesek3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
