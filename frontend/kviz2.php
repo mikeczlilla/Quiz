@@ -88,7 +88,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-                <button type="submit" formaction="fooldal.php" class="btn btn-primary">Kilépés</button>
+                <button type="submit" formaction="fooldal.php" class="btn btn-danger">Kilépés</button>
               </div>
             </div>
           </div>

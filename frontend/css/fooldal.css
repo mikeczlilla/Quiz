@@ -6,7 +6,7 @@ body {
 .card {
   background-color: #344e41;
   color: white;
-  max-width: 1200px;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
@@ -49,17 +49,28 @@ body {
   left: 795px;
 }
 .container {
-  height: auto;
+  height: auto; /*
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: auto;
   justify-items: center;
-  align-items: center;
+  align-items: center; */
+
+  /* box model properties */
+  margin: 3rem auto;
+  padding: 2rem;
+
+  /* display properties */
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  place-items: center;
+  gap: 20px 30px;
 }
-#kartya {
+#kartya1, #kartya2, #kartya3 {
   background-color: rgba(255, 255, 255, 0.473);
   color: black;
   max-height: 300px;
+  width: 280px;
 }
 .logo{
   width: 100px;
@@ -82,18 +93,20 @@ img {
 a{
   margin-left: 20px;
 }
-
+/* 
 @media (width < 600px) {
   .card {
     max-width: 600px;
-  }
+  }210
   #txtarea {
     width: max-content;
   }
-}
-@media (width < 900px) {
+} */
+/* @media screen and (min-width < 600px) and (max-width > 900px) {
   .card {
-    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
   }
   #txtarea {
     width: 400px;
@@ -105,5 +118,26 @@ a{
     margin-left: 0;
     margin-right: 0;
     margin-top: 20px;
+  }
+} */
+
+
+
+@media screen and (min-width:250px) and (max-width:480px) {
+  .container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+ /* Tablet View */
+ @media screen and (min-width:481px) and (max-width:768px) {
+  .container{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+ /* Laptop View */
+ @media screen and (min-width:769px) and (max-width:1024px) {
+  .container{
+    grid-template-columns: repeat(4,1fr);
   }
 }

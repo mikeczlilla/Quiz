@@ -45,35 +45,29 @@ if (!$conn) {
       <h2>Válassz a kvízek közül:</h2>
       <div class="container">
 
-        <form action="">
-          <div class="card" id="kartya" style="width: 18rem;">
+          <div class="card" id="kartya1">
             <div class="card-body">
               <h3 class="card-title"><img src="kep/ballot.svg" alt="icon"> Kvíz 1</h3>
               <p class="card-text">Legyen ön is milliomos!</p>
               <a href="kviz1.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
-        </form>
 
-        <form action="">
-          <div class="card" id="kartya" style="width: 18rem;">
+          <div class="card" id="kartya2">
             <div class="card-body">
               <h3 class="card-title"><img src="kep/ballot.svg" alt="icon"> Kvíz 2</h3>
               <p class="card-text">Igaz vagy Hamis?</p>
               <a href="kviz2.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
-        </form>
 
-        <form action="">
-          <div class="card" id="kartya" style="width: 18rem;">
+          <div class="card" id="kartya3">
             <div class="card-body">
               <h3 class="card-title"><img src="kep/ballot.svg" alt="icon"> Kvíz 3</h3>
               <p class="card-text">Legyen ön is milliomos!</p>
               <a href="kviz3.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
-        </form>
 
       </div>
       <form action="" id="kilepes">
@@ -88,7 +82,7 @@ if (!$conn) {
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-                <button type="submit" formaction="index.php" class="btn btn-primary">Kilépés</button>
+                <button type="submit" formaction="index.php" class="btn btn-danger">Kilépés</button>
               </div>
             </div>
           </div>
