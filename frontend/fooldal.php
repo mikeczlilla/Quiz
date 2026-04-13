@@ -33,11 +33,11 @@ if (!$conn) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="fooldal.css">
+    <link rel="stylesheet" href="css/fooldal.css">
 </head>
 
 <body>
-<img class="logo" style="width: 100px; position: absolute; top: 30px; left: 30px; border-radius: 10px;" src="quiz.logo.png" alt="logo">
+<img class="logo" style="width: 100px; position: absolute; top: 30px; left: 30px; border-radius: 10px;" src="kep/quiz.logo.png" alt="logo">
   <h1 id="udvozles">Üdvözlünk, <?php echo $_SESSION["fnev"]; ?>!</h1>
  
   <div class="card">
@@ -45,35 +45,29 @@ if (!$conn) {
       <h2>Válassz a kvízek közül:</h2>
       <div class="container">
 
-        <form action="">
-          <div class="card" id="kartya" style="width: 18rem;">
+          <div class="card" id="kartya1">
             <div class="card-body">
-              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 1</h3>
+              <h3 class="card-title"><img src="kep/ballot.svg" alt="icon"> Kvíz 1</h3>
               <p class="card-text">Legyen ön is milliomos!</p>
               <a href="kviz1.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
-        </form>
 
-        <form action="">
-          <div class="card" id="kartya" style="width: 18rem;">
+          <div class="card" id="kartya2">
             <div class="card-body">
-              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 2</h3>
+              <h3 class="card-title"><img src="kep/ballot.svg" alt="icon"> Kvíz 2</h3>
               <p class="card-text">Igaz vagy Hamis?</p>
               <a href="kviz2.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
-        </form>
 
-        <form action="">
-          <div class="card" id="kartya" style="width: 18rem;">
+          <div class="card" id="kartya3">
             <div class="card-body">
-              <h3 class="card-title"><img src="ballot.svg" alt="icon"> Kvíz 3</h3>
-              <p class="card-text">A kvíz rövid leírása</p>
-              <a href="#" class="btn btn-primary">Kvíz Indítása</a>
+              <h3 class="card-title"><img src="kep/ballot.svg" alt="icon"> Kvíz 3</h3>
+              <p class="card-text">Legyen ön is milliomos!</p>
+              <a href="kviz3.php" class="btn btn-primary">Kvíz Indítása</a>
             </div>
           </div>
-        </form>
 
       </div>
       <form action="" id="kilepes">
@@ -88,7 +82,7 @@ if (!$conn) {
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-                <button type="submit" formaction="index.php" class="btn btn-primary">Kilépés</button>
+                <button type="submit" formaction="index.php" class="btn btn-danger">Kilépés</button>
               </div>
             </div>
           </div>

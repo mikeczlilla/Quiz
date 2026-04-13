@@ -20,11 +20,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="bejelentkezes.css">
+  <link rel="stylesheet" href="css/bejelentkezes.css">
 </head>
 
 <body>
-<img style="width: 100px; position: absolute; top: 30px; left: 30px; border-radius: 10px;" class="logo" src="quiz.logo.png" alt="logo">
+<img style="width: 100px; position: absolute; top: 30px; left: 30px; border-radius: 10px;" class="logo" src="kep/quiz.logo.png" alt="logo">
   <div class="card">
     <div class="card-body">
       <h1>Bejelentkezés</h1>
@@ -33,7 +33,7 @@
         echo '<div class="alert alert-danger" style="width: 400px;" role="alert">' . $_SESSION["hibauzenet"] . '</div>';
         unset($_SESSION["hibauzenet"]);
       } ?>
-      <form action="./php/bejelentkezes.php" method="post">
+      <form action="../backend/bejelentkezes.php" method="post">
         <div class="mb-3">
           <label for="email_b" class="form-label">Email cím</label>
           <input style="max-width: 400px;" type="email" name="email_b" class="form-control" id="email_b"

@@ -6,9 +6,10 @@ body {
 .card {
   background-color: #344e41;
   color: white;
-  max-width: 1000px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 126px;
   border-radius: 20px;
   box-shadow: 2px 2px 20px black;
 }
@@ -26,25 +27,20 @@ p {
   margin: 5px;
   font-size: 20px;
 }
+#div-regisztracio {
+  position: unset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 #checkB {
   width: fit-content;
 }
-#container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-}
-#container input {
-  max-width: 330px;
-}
-#section2 {
-  margin-top: 20px;
-}
-.linkbejelentkezes {
+.linkregisztracio {
   color: #fefcfb;
 }
-.linkbejelentkezes:hover {
-  color: #48cae4;
+.linkregisztracio:hover {
+  color: #52b788;
 }
 
 @media (width > 900px) {
@@ -54,6 +50,6 @@ p {
   #div-regisztracio {
     position: absolute;
     left: 60%;
-    bottom: 5%;
+    bottom: 10%;
   }
 }
