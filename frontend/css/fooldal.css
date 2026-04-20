@@ -1,5 +1,5 @@
 body {
-  background-color: #588157;
+  background-color: #588157 !important;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -126,16 +126,28 @@ a{
 @media screen and (min-width:250px) and (max-width:480px) {
   .container{
     grid-template-columns: repeat(1,1fr);
+    margin: 0;
+
+  }
+  .card{
+    width: 90%;
+  }
+  .card-body{
+    padding: 10px;
+    margin: 0 !important;
+    margin-bottom: 50px !important;
+  }
+  #kartya1, #kartya2, #kartya3{
+    margin: 10px;
   }
 }
 
- /* Tablet View */
  @media screen and (min-width:481px) and (max-width:768px) {
   .container{
     grid-template-columns: repeat(3,1fr);
   }
 }
- /* Laptop View */
+
  @media screen and (min-width:769px) and (max-width:1024px) {
   .container{
     grid-template-columns: repeat(4,1fr);
