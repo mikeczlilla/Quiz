@@ -37,5 +37,7 @@
 
 </html>
 <?php
-unset($_SESSION['quiz_questions'], $_SESSION['current_index'], $_SESSION['score'], $_SESSION['quiz_finished']);
+unset($_SESSION['quiz_questions1'], $_SESSION['current_index1'], $_SESSION['score1'], $_SESSION['quiz_finished1']);
+unset($_SESSION['quiz_questions2'], $_SESSION['current_index2'], $_SESSION['score2'], $_SESSION['quiz_finished2']);
+unset($_SESSION['quiz_questions3'], $_SESSION['current_index3'], $_SESSION['score3'], $_SESSION['quiz_finished3']);
 exit; ?>
